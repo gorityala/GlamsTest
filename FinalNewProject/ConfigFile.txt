@@ -1,0 +1,14 @@
+#Suite_AFile is a TestSuiteFile
+#Suite_BFile is a TestSuiteDataFile
+
+# SuiteFiles for Regression Cases
+#Suite_AFile=C:\\FunctionalTestAutomationFramework\\FinalNewProject\\TestSuites\\RegressionCases\\TestSuite.xlsx
+#Suite_BFile=C:\\FunctionalTestAutomationFramework\\FinalNewProject\\TestSuites\\RegressionCases\\TestSuiteData.xlsx
+
+#SuiteFiles for SmokeCases
+Suite_AFile=C:\\FunctionalTestAutomationFramework\\FinalNewProject\\TestSuites\\SmokeCases\\SuiteFile.xlsx
+Suite_BFile=C:\\FunctionalTestAutomationFramework\\FinalNewProject\\TestSuites\\SmokeCases\\SuiteFileData.xlsx
+
+
+
+

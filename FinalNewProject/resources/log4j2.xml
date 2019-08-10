@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="Warn">
+    <Properties>
+        <Property name="basePath">./logs</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="fileLogger" fileName="${basePath}/Log4jPrints.html"
+                     filePattern="${basePath}/Log4jPrints-%d{yyyy-MM-dd}.html">
+            <HTMLLayout charset="UTF-8" title="ErrorLog" locationInfo="True" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="500 MB" />
+            </Policies>
+        </RollingFile>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout   pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="Test.TestController" level="error" additivity="false">
+        <logger name="TestBase.TestBaseClass" level="error" additivity="false"/>
+            <appender-ref ref="fileLogger" level="error" />
+            <appender-ref ref="console" level="error" />
+        </Logger>
+        
+        <Root level="error" additivity="false">
+            <appender-ref ref="fileLogger" />
+            <appender-ref ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
